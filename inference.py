@@ -7,7 +7,6 @@ import torch
 from model import Config, Transformer
 
 
-
 if __name__ == '__main__':
     x = torch.randint(0, 10, (1, 1))
     model_args = Config()
