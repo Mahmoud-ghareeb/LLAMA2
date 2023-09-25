@@ -207,11 +207,11 @@ class Transformer(nn.Module):
     
 if __name__ == '__main__':
     x = torch.randint(0, 10, (1, 1))
-    con = Config()
-    con.dim = 512
-    con.max_batch_size = 1
-    con.max_seq_len = 10
-    con.device = 'cuda'
-    con.vocab_size = 100
-    print(Transformer(con).to()(x, 0))
+    model_args = Config()
+    model_args.dim = 512
+    model_args.max_batch_size = 1
+    model_args.max_seq_len = 10
+    model_args.device = 'cuda'
+    model_args.vocab_size = 100
+    print(Transformer(model_args)(x, 0))
         
